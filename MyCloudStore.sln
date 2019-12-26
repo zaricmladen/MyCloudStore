@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCloudStoreService", "MyCloudStoreService\MyCloudStoreService.csproj", "{DF2F973F-1755-488B-92D8-DC859792F2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCloudStoreClient", "MyCloudStoreClient\MyCloudStoreClient.csproj", "{B4B47B00-B393-4489-8732-1C9AE92DBEAC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF2F973F-1755-488B-92D8-DC859792F2EC} = {DF2F973F-1755-488B-92D8-DC859792F2EC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{AA6F08A5-AF1E-4A9D-8801-9951DFFE5AC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF2F973F-1755-488B-92D8-DC859792F2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2F973F-1755-488B-92D8-DC859792F2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2F973F-1755-488B-92D8-DC859792F2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2F973F-1755-488B-92D8-DC859792F2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B47B00-B393-4489-8732-1C9AE92DBEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B47B00-B393-4489-8732-1C9AE92DBEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B47B00-B393-4489-8732-1C9AE92DBEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B47B00-B393-4489-8732-1C9AE92DBEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA6F08A5-AF1E-4A9D-8801-9951DFFE5AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6F08A5-AF1E-4A9D-8801-9951DFFE5AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6F08A5-AF1E-4A9D-8801-9951DFFE5AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6F08A5-AF1E-4A9D-8801-9951DFFE5AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

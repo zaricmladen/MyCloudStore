@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StoreService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60567/StoreService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60567/StoreService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60567/StoreService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStoreService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_authenthicateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:authenthicateUser" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_authenthicateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:authenthicateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_storeFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:storeFile" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_storeFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:storeFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_getChunks_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChunks" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_getChunks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChunksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_downloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_downloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_downloadFileChunk_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFileChunk" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_downloadFileChunk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFileChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_filesNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:filesNames" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_filesNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filesNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_checkAvailableSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkAvailableSpace" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_checkAvailableSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkAvailableSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_incUsedSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:incUsedSpace" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_incUsedSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:incUsedSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_decUsedSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:decUsedSpace" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_decUsedSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:decUsedSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_deleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFile" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_deleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStoreService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/DoWork" message="tns:IStoreService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/DoWorkResponse" message="tns:IStoreService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="authenthicateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/authenthicateUser" message="tns:IStoreService_authenthicateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/authenthicateUserResponse" message="tns:IStoreService_authenthicateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="storeFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/storeFile" message="tns:IStoreService_storeFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/storeFileResponse" message="tns:IStoreService_storeFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChunks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/getChunks" message="tns:IStoreService_getChunks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/getChunksResponse" message="tns:IStoreService_getChunks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/downloadFile" message="tns:IStoreService_downloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/downloadFileResponse" message="tns:IStoreService_downloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadFileChunk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/downloadFileChunk" message="tns:IStoreService_downloadFileChunk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/downloadFileChunkResponse" message="tns:IStoreService_downloadFileChunk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="filesNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/filesNames" message="tns:IStoreService_filesNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/filesNamesResponse" message="tns:IStoreService_filesNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAvailableSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/checkAvailableSpace" message="tns:IStoreService_checkAvailableSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/checkAvailableSpaceResponse" message="tns:IStoreService_checkAvailableSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="incUsedSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/incUsedSpace" message="tns:IStoreService_incUsedSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/incUsedSpaceResponse" message="tns:IStoreService_incUsedSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="decUsedSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/decUsedSpace" message="tns:IStoreService_decUsedSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/decUsedSpaceResponse" message="tns:IStoreService_decUsedSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/deleteFile" message="tns:IStoreService_deleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/deleteFileResponse" message="tns:IStoreService_deleteFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStoreService" type="tns:IStoreService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenthicateUser">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/authenthicateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeFile">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/storeFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChunks">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/getChunks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/downloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFileChunk">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/downloadFileChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="filesNames">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/filesNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAvailableSpace">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/checkAvailableSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incUsedSpace">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/incUsedSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="decUsedSpace">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/decUsedSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/deleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StoreService">
+    <wsdl:port name="BasicHttpBinding_IStoreService" binding="tns:BasicHttpBinding_IStoreService">
+      <soap:address location="http://localhost:60567/StoreService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
